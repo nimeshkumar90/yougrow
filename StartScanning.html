@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YouGrow | Scanning</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!--Materialize-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+        html{
+            font-family: 'Poppins', sans-serif!important;
+        }
+        body{
+            background-color: #1A1A2E;
+
+        }
+        .scanning_box{
+            background-color: black;
+            height: 200px;
+            width: 150px;
+            margin: 120px auto;
+            border-radius: 10px;
+            background: #1A1A2E;
+            box-shadow:  10px 10px 28px #161627,
+             -10px -10px 28px #1e1e35;
+             text-align: center;
+             position: relative;
+        }
+        .scanning_box > img{
+            padding-top:50px;
+        }
+        .scanning_box::after{
+            content: "";
+            position: absolute;
+            width: 105%;
+            overflow: hidden;
+            background-color: #3E7C17;
+            height: 25px;
+            opacity: .3;
+            border-radius: 3px;
+            left: -3%;
+            animation-name: example;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+            /*animation-direction: reverse;*/
+            animation-direction: alternate;
+        }
+        @keyframes example {
+        from {top:5%;}
+        to {top:90%;}
+        }
+        .logo{
+            margin-top: 40px;
+        }
+    </style>
+  </head>
+  <body>
+    <section class="center-align logo">        
+        <img src="possibleLogo copy.png" width="130">
+    </section>
+    <section class="center-align">
+        <div class="scanning_box center-align">
+            <img src="plant.png" width="80">
+        </div>
+    </section>
+
+    <section class="center-align">
+        <a class="waves-effect waves-light btn-large yellow darken-3">Start Scanning</a>
+    </section>
+  </body>
+</html>
